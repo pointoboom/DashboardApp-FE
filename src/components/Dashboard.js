@@ -11,10 +11,6 @@ function Dashboard({ socket }) {
         const result = await axios.post(`http://localhost:4000/comment/${postId}`, {
             text: comment
         })
-        socket.emit('comment', {
-            postId,
-            text: comment
-        })
         setComment("")
     }
     const getData = async () => {

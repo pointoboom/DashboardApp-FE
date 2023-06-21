@@ -19,10 +19,9 @@ function Createpost({ socket }) {
                     <Flex direction='column'>
                         <FormControl>
                             <FormLabel>Title</FormLabel>
-                            <Input placeholder='Input Post' width='300px' onChange={(e) => { setTitle(e.target.value) }} onKeyDown={(e) => {
+                            <Input placeholder='Input Post' width='300px' value={title} onChange={(e) => { setTitle(e.target.value) }} onKeyDown={(e) => {
                                 if (e.key === 'Enter') {
                                     createPost()
-                                    e.target.value = ''
                                     setTitle("")
                                 }
                             }} />
