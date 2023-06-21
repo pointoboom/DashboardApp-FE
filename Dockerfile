@@ -2,7 +2,7 @@ FROM node:18
 WORKDIR /app
 COPY package*.json ./
 # COPY package*.json ./
-RUN npm ci
+RUN npm i
 COPY . .
 # Build the React app
 RUN npm run build
